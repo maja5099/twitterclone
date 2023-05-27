@@ -4,10 +4,10 @@
 
 from bottle import default_app, get, post, run, request, response, static_file, template
 import git
-# import sqlite3
-# import pathlib
+import sqlite3
+import pathlib
 import dbconnection
-# import os
+import os
 
 
 @post("/secret_url_git_hook")
