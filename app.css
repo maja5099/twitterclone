@@ -51,9 +51,7 @@ html {
   font-variation-settings: normal;
   /* 6 */
 }
-.word-wrap {
-  word-wrap: break-word;
-}
+
 /*
 1. Remove the margin in all browsers.
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
@@ -603,10 +601,6 @@ video {
   margin-top: -3rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -1083,11 +1077,6 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .pb-1 {
