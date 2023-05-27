@@ -8,7 +8,6 @@ import sqlite3
 import pathlib
 import dbconnection
 import os
-from dotenv import load_dotenv
 
 
 @post("/secret_url_git_hook")
