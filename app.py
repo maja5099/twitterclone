@@ -20,7 +20,7 @@ def git_update():
 
 @get("/")
 def _():
-    "Two"
+    return "Two"
 
 
 # ##############################
