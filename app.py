@@ -1,3 +1,7 @@
+# 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
+# https://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@github.com/maja5099/twitterclone.git
+
+
 from bottle import default_app, get, post, run, request, response, static_file, template
 import git
 # import sqlite3
@@ -13,6 +17,10 @@ def git_update():
     repo.create_head("main", origin.refs.main).set_tracking_branch(origin.refs.main).checkout()
     origin.pull()
     return "Everything OK"
+
+@get("/")
+def _():
+    "One"
 
 
 # ##############################
