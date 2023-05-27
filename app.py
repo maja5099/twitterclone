@@ -20,7 +20,7 @@ def git_update():
 
 @get("/")
 def _():
-    return dbconnection.user()
+    return {"test 2":dbconnection.user()} 
 
 
 # ##############################
