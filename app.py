@@ -8,6 +8,7 @@ import sqlite3
 import pathlib
 import dbconnection
 import os
+from dotenv import load_dotenv
 
 
 @post("/secret_url_git_hook")
@@ -20,7 +21,8 @@ def git_update():
 
 @get("/")
 def _():
-    return {"test 2":dbconnection.user()} 
+    load_dotenv('.env')
+    return {"test 3":os.getenv("MY_SECRET")} 
 
 
 # ##############################
