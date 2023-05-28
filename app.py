@@ -16,7 +16,7 @@ def git_update():
     origin = repo.remotes.origin
     repo.create_head("main", origin.refs.main).set_tracking_branch(origin.refs.main).checkout()
     origin.pull()
-    return "Everything OK DOKIE, test 2"
+    return "Everything OK DOKIE, test 3"
 
 
 ##############################
