@@ -9,17 +9,17 @@
 <body>
     <!-- trends for you start -->
     <div class="bg-twitter-right-box-bg w-full mt-4 rounded-xl">
-        <h2 id="" class="text-20 font-bold text-twitter-light-grey px-4 py-2">Trends for you</h2>
+        <h2 class="text-20 font-bold text-twitter-light-grey px-4 py-2">Trends for you</h2>
 
         <!-- trend start -->
         % for trend in trends:
         <div class="flex w-full items-start justify-between hover:backdrop-brightness-125 hover:cursor-pointer px-4 py-2 transition duration-200 ease-in-out">
                 <div class="grid gap-y-0.5">
-                    <div id="sm_dark_txt" class="text-13 text-twitter-grey">{{trend["trend_category"]}}</div>
-                    <div id="sm_light_bold_txt" class="text-15 font-bold text-twitter-light-grey">{{trend["trend_title"]}}</div>
+                    <div class="text-13 text-twitter-grey">{{trend["trend_category"]}}</div>
+                    <div class="text-15 font-bold text-twitter-light-grey">{{trend["trend_title"]}}</div>
                     <div class="inline-flex">
-                        <div id="sm_dark_txt" class="tweet-number text-13 text-twitter-grey">{{trend["trend_total_tweets"]}}</div>
-                        <div id="sm_dark_txt" class="tweet-number text-13 text-twitter-grey">&nbsp;Tweets</div>
+                        <div class="tweet-number text-13 text-twitter-grey">{{trend["trend_total_tweets"]}}</div>
+                        <div class="tweet-number text-13 text-twitter-grey">&nbsp;Tweets</div>
                     </div>
                 </div>
                 <!-- more start -->
