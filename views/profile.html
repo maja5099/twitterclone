@@ -12,10 +12,11 @@
     </title>
 </head>
 
+
 <body class="bg-black">
     <div id="overlay" class="hidden fixed top-0 bottom-0 left-0 right-0 w-screen h-screen bg-twitter-overlay bg-opacity-40 z-100"></div>
         <div class="backdrop-blur-sm"></div>
-    </div> 
+    </div>
 
     % include("signup")
     % include("login")
@@ -24,20 +25,16 @@
     <div class="md:max-w-3xl lg:max-w-screen-xl mx-auto">
         <div class="flex justify-center text-twitter-light-grey">
 
-
             <!-- left start -->
             % include("left")
-        
             <!-- left end -->
 
             <!-- middle start -->
             <div class="border-x border-twitter-line w-full lg:w-600">
 
                 <!-- top start -->
-                
                     <!-- arrow back, name and followers start -->
                     <div class="sticky bg-black bg-opacity-70 top-0 backdrop-blur-lg z-50">
-
                         <div class="flex items-center gap-7 px-2.5">
                             <!-- arrow back start -->
                             <a href="/">
@@ -48,11 +45,11 @@
                             <!-- arrow back end -->
 
                             <!-- name + followers start -->
-                            <div class="gap-1 py-0.5">
-                                <div class="flex items-center">
+                            <div class="py-0.5">
+                                <div class="flex items-center gap-1">
                                     <h1 class="text-20 font-bold text-twitter-light-grey">{{user["user_first_name"]}} {{user["user_last_name"]}}</h1>
                                     % if user["user_verified"] == 1:
-                                    <div class="text-twitter-blue">
+                                    <div class="text-twitter-blue mt-1.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" stroke="" stroke-linecap="round" stroke-linejoin="round" d="M 20.396 11 c -0.018 -0.646 -0.215 -1.275 -0.57 -1.816 c -0.354 -0.54 -0.852 -0.972 -1.438 -1.246 c 0.223 -0.607 0.27 -1.264 0.14 -1.897 c -0.131 -0.634 -0.437 -1.218 -0.882 -1.687 c -0.47 -0.445 -1.053 -0.75 -1.687 -0.882 c -0.633 -0.13 -1.29 -0.083 -1.897 0.14 c -0.273 -0.587 -0.704 -1.086 -1.245 -1.44 S 11.647 1.62 11 1.604 c -0.646 0.017 -1.273 0.213 -1.813 0.568 s -0.969 0.854 -1.24 1.44 c -0.608 -0.223 -1.267 -0.272 -1.902 -0.14 c -0.635 0.13 -1.22 0.436 -1.69 0.882 c -0.445 0.47 -0.749 1.055 -0.878 1.688 c -0.13 0.633 -0.08 1.29 0.144 1.896 c -0.587 0.274 -1.087 0.705 -1.443 1.245 c -0.356 0.54 -0.555 1.17 -0.574 1.817 c 0.02 0.647 0.218 1.276 0.574 1.817 c 0.356 0.54 0.856 0.972 1.443 1.245 c -0.224 0.606 -0.274 1.263 -0.144 1.896 c 0.13 0.634 0.433 1.218 0.877 1.688 c 0.47 0.443 1.054 0.747 1.687 0.878 c 0.633 0.132 1.29 0.084 1.897 -0.136 c 0.274 0.586 0.705 1.084 1.246 1.439 c 0.54 0.354 1.17 0.551 1.816 0.569 c 0.647 -0.016 1.276 -0.213 1.817 -0.567 s 0.972 -0.854 1.245 -1.44 c 0.604 0.239 1.266 0.296 1.903 0.164 c 0.636 -0.132 1.22 -0.447 1.68 -0.907 c 0.46 -0.46 0.776 -1.044 0.908 -1.681 s 0.075 -1.299 -0.165 -1.903 c 0.586 -0.274 1.084 -0.705 1.439 -1.246 c 0.354 -0.54 0.551 -1.17 0.569 -1.816 Z M 9.662 14.85 l -3.429 -3.428 l 1.293 -1.302 l 2.072 2.072 l 4.4 -4.794 l 1.347 1.246 Z"/></svg>
                                     </div>
                                     % end
@@ -94,35 +91,38 @@
                     <!-- info start -->
                     <div class="p-4 gap-4">
                         <div>
-                            <div class="flex items-center">
+                            <!-- user first & last name -->
+                            <div class="flex items-center gap-1">
                                 <h2 class="text-20 font-bold text-twitter-light-grey">{{user["user_first_name"]}} {{user["user_last_name"]}}</h2>    
                                 % if user["user_verified"] == 1:
-                                <div class="text-twitter-blue">
+                                <div class="text-twitter-blue mt-1.5">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" stroke="" stroke-linecap="round" stroke-linejoin="round" d="M 20.396 11 c -0.018 -0.646 -0.215 -1.275 -0.57 -1.816 c -0.354 -0.54 -0.852 -0.972 -1.438 -1.246 c 0.223 -0.607 0.27 -1.264 0.14 -1.897 c -0.131 -0.634 -0.437 -1.218 -0.882 -1.687 c -0.47 -0.445 -1.053 -0.75 -1.687 -0.882 c -0.633 -0.13 -1.29 -0.083 -1.897 0.14 c -0.273 -0.587 -0.704 -1.086 -1.245 -1.44 S 11.647 1.62 11 1.604 c -0.646 0.017 -1.273 0.213 -1.813 0.568 s -0.969 0.854 -1.24 1.44 c -0.608 -0.223 -1.267 -0.272 -1.902 -0.14 c -0.635 0.13 -1.22 0.436 -1.69 0.882 c -0.445 0.47 -0.749 1.055 -0.878 1.688 c -0.13 0.633 -0.08 1.29 0.144 1.896 c -0.587 0.274 -1.087 0.705 -1.443 1.245 c -0.356 0.54 -0.555 1.17 -0.574 1.817 c 0.02 0.647 0.218 1.276 0.574 1.817 c 0.356 0.54 0.856 0.972 1.443 1.245 c -0.224 0.606 -0.274 1.263 -0.144 1.896 c 0.13 0.634 0.433 1.218 0.877 1.688 c 0.47 0.443 1.054 0.747 1.687 0.878 c 0.633 0.132 1.29 0.084 1.897 -0.136 c 0.274 0.586 0.705 1.084 1.246 1.439 c 0.54 0.354 1.17 0.551 1.816 0.569 c 0.647 -0.016 1.276 -0.213 1.817 -0.567 s 0.972 -0.854 1.245 -1.44 c 0.604 0.239 1.266 0.296 1.903 0.164 c 0.636 -0.132 1.22 -0.447 1.68 -0.907 c 0.46 -0.46 0.776 -1.044 0.908 -1.681 s 0.075 -1.299 -0.165 -1.903 c 0.586 -0.274 1.084 -0.705 1.439 -1.246 c 0.354 -0.54 0.551 -1.17 0.569 -1.816 Z M 9.662 14.85 l -3.429 -3.428 l 1.293 -1.302 l 2.072 2.072 l 4.4 -4.794 l 1.347 1.246 Z"/></svg>
                                 </div>
                                 % end
-                            </div> 
+                            </div>
+                            <!-- username -->
                             <p class="text-15 text-twitter-grey">@{{user["user_name"]}}</p>                      
                         </div>
 
+                        <!-- created at start -->
                         <div class="flex items-center text-twitter-grey gap-1 mt-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" stroke="" stroke-linecap="round" stroke-linejoin="round" d="M 7 4 V 3 h 2 v 1 h 6 V 3 h 2 v 1 h 1.5 C 19.89 4 21 5.12 21 6.5 v 12 c 0 1.38 -1.11 2.5 -2.5 2.5 h -13 C 4.12 21 3 19.88 3 18.5 v -12 C 3 5.12 4.12 4 5.5 4 H 7 Z m 0 2 H 5.5 c -0.27 0 -0.5 0.22 -0.5 0.5 v 12 c 0 0.28 0.23 0.5 0.5 0.5 h 13 c 0.28 0 0.5 -0.22 0.5 -0.5 v -12 c 0 -0.28 -0.22 -0.5 -0.5 -0.5 H 17 v 1 h -2 V 6 H 9 v 1 H 7 V 6 Z m 0 6 h 2 v -2 H 7 v 2 Z m 0 4 h 2 v -2 H 7 v 2 Z m 4 -4 h 2 v -2 h -2 v 2 Z m 0 4 h 2 v -2 h -2 v 2 Z m 4 -4 h 2 v -2 h -2 v 2 Z"/></svg>
-                            <p id="joined_at" class="text-15">{{user["user_created_at"]}}</p> 
+                            <p id="joined_at" class="text-15">{{user["user_created_at"]}}</p>
                         </div>
+                        <!-- created at end -->
 
                         <div class="flex items-center gap-4 mt-2">
                             <!-- following -->
                             <div class="flex items-center gap-1">
-                                <p class="tweet-number text-15 font-semibold text-twitter-light-grey">{{user["user_total_following"]}}</p> 
-                                <p class="text-15 text-twitter-grey">Following</p> 
+                                <p class="tweet-number text-15 font-semibold text-twitter-light-grey">{{user["user_total_following"]}}</p>
+                                <p class="text-15 text-twitter-grey">Following</p>
                             </div>
                             <!-- followers -->
                             <div class="flex items-center gap-1">
-                                <p class="tweet-number text-15 font-semibold text-twitter-light-grey">{{user["user_total_followers"]}}</p> 
-                                <p class="text-15 text-twitter-grey">Followers</p> 
+                                <p class="tweet-number text-15 font-semibold text-twitter-light-grey">{{user["user_total_followers"]}}</p>
+                                <p class="text-15 text-twitter-grey">Followers</p>
                             </div>
                         </div>
-
                     </div>
                     <!-- info end -->
 
@@ -134,12 +134,11 @@
                         <a href="" class="text-15 font-semibold text-twitter-grey w-full hover:bg-twitter-light-grey hover:bg-opacity-10 p-4 transition duration-200 ease-in-out">Likes</a>
                     </div>
                     <!-- buttons end -->
-
                 <!-- top end -->
 
                 <!-- tweet start -->
                 % for profile_tweet in profile_tweets:
-                <div class="border-t border-twitter-line px-4 py-3">
+                <div class="border-t border-twitter-line px-4 pt-3 pb-1">
                     <div class="inline-flex w-full gap-3">
 
                         <!-- left (user avatar + data) start -->
@@ -147,22 +146,21 @@
                             <img class="w-12 rounded-full" src="/images/avatars/{{profile_tweet['user_avatar']}}" alt="">
                         </div>
                         <!-- left (user avatar + data) end -->
-                        
+            
                         <!-- right start -->
                         <div class="w-11/12">
-
                             <!-- username + data start -->
                             <div class="w-full">
                                 <div class="flex justify-between">
                                     <div class="inline-flex items-center gap-0.5 lg:gap-1">
-                                        <p class="text-15 font-bold text-twitter-light-grey hover:underline hover:cursor-pointer transition duration-200 ease-in-out">{{profile_tweet["user_first_name"]}}&nbsp{{profile_tweet["user_last_name"]}}</p>   
-                                        
+                                        <p class="text-15 font-bold text-twitter-light-grey hover:underline hover:cursor-pointer transition duration-200 ease-in-out">{{profile_tweet["user_first_name"]}}&nbsp{{profile_tweet["user_last_name"]}}</p>  
+                        
                                         % if get('profile_tweet["user_verified"]'):
-                                        <div class="text-twitter-blue">
+                                        <div class="text-twitter-blue mt-0.5">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" stroke="" stroke-linecap="round" stroke-linejoin="round" d="M 20.396 11 c -0.018 -0.646 -0.215 -1.275 -0.57 -1.816 c -0.354 -0.54 -0.852 -0.972 -1.438 -1.246 c 0.223 -0.607 0.27 -1.264 0.14 -1.897 c -0.131 -0.634 -0.437 -1.218 -0.882 -1.687 c -0.47 -0.445 -1.053 -0.75 -1.687 -0.882 c -0.633 -0.13 -1.29 -0.083 -1.897 0.14 c -0.273 -0.587 -0.704 -1.086 -1.245 -1.44 S 11.647 1.62 11 1.604 c -0.646 0.017 -1.273 0.213 -1.813 0.568 s -0.969 0.854 -1.24 1.44 c -0.608 -0.223 -1.267 -0.272 -1.902 -0.14 c -0.635 0.13 -1.22 0.436 -1.69 0.882 c -0.445 0.47 -0.749 1.055 -0.878 1.688 c -0.13 0.633 -0.08 1.29 0.144 1.896 c -0.587 0.274 -1.087 0.705 -1.443 1.245 c -0.356 0.54 -0.555 1.17 -0.574 1.817 c 0.02 0.647 0.218 1.276 0.574 1.817 c 0.356 0.54 0.856 0.972 1.443 1.245 c -0.224 0.606 -0.274 1.263 -0.144 1.896 c 0.13 0.634 0.433 1.218 0.877 1.688 c 0.47 0.443 1.054 0.747 1.687 0.878 c 0.633 0.132 1.29 0.084 1.897 -0.136 c 0.274 0.586 0.705 1.084 1.246 1.439 c 0.54 0.354 1.17 0.551 1.816 0.569 c 0.647 -0.016 1.276 -0.213 1.817 -0.567 s 0.972 -0.854 1.245 -1.44 c 0.604 0.239 1.266 0.296 1.903 0.164 c 0.636 -0.132 1.22 -0.447 1.68 -0.907 c 0.46 -0.46 0.776 -1.044 0.908 -1.681 s 0.075 -1.299 -0.165 -1.903 c 0.586 -0.274 1.084 -0.705 1.439 -1.246 c 0.354 -0.54 0.551 -1.17 0.569 -1.816 Z M 9.662 14.85 l -3.429 -3.428 l 1.293 -1.302 l 2.072 2.072 l 4.4 -4.794 l 1.347 1.246 Z"/></svg>
                                         </div>
                                         % end
-                                        
+                            
                                         <p class="text-15 text-twitter-grey">@{{profile_tweet["user_name"]}}</p>
                                         <p class="text-15 text-twitter-grey">∙</p>
                                         <p class="tweet-time text-15 text-twitter-grey hover:underline hover:cursor-pointer transition duration-200 ease-in-out">{{profile_tweet["tweet_created_at"]}}</p>
@@ -171,7 +169,7 @@
                                     <!-- more start -->
                                     <div class="">
                                         <div class="relative">
-                                            <div class="hover:bg-twitter-blue text-twitter-grey hover:text-twitter-blue hover:bg-opacity-15 rounded-full hover:cursor-pointer px-1 pb-1 transition duration-200 ease-in-out">
+                                            <div class="hover:bg-twitter-blue text-twitter-grey hover:text-twitter-blue hover:bg-opacity-15 rounded-full hover:cursor-pointer p-2 transition duration-200 ease-in-out">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"><path fill="currentColor" stroke="" stroke-linecap="round" stroke-linejoin="round" d="M 3 12 c 0 -1.1 0.9 -2 2 -2 s 2 0.9 2 2 s -0.9 2 -2 2 s -2 -0.9 -2 -2 Z m 9 2 c 1.1 0 2 -0.9 2 -2 s -0.9 -2 -2 -2 s -2 0.9 -2 2 s 0.9 2 2 2 Z m 7 0 c 1.1 0 2 -0.9 2 -2 s -0.9 -2 -2 -2 s -2 0.9 -2 2 s 0.9 2 2 2 Z"/></svg>
                                             </div>
                                         </div>
@@ -179,13 +177,13 @@
                                     <!-- more end -->
                                 </div>
                             </div>
-                
                             <!-- username + data end -->
                             <div>
-                        
+                
                             <!-- tweet message start -->
                             <p class="text-15 text-twitter-light-grey word-wrap">{{profile_tweet["tweet_message"]}}</p>
                             <!-- tweet message end -->
+
                             % if profile_tweet["tweet_image"]:
                             <!-- tweet image start -->
                             <div class="pt-3 pb-1">
@@ -193,6 +191,7 @@
                             </div>
                             <!-- tweet image end -->
                             % end
+
                             <!-- icons start -->
                             <div class="flex items-center justify-between text-twitter-light-grey md:w-10/12 lg:w-10/12">
                                 <!-- comments start -->
@@ -221,7 +220,7 @@
                                     <span class="tweet-number text-13 group-hover:text-twitter-red text-twitter-grey">{{profile_tweet["tweet_total_likes"]}}</span>
                                 </div>
                                 <!-- likes end -->
-                                
+                            
                                 <!-- views start -->
                                 <div class="flex items-center gap-1 group hover:cursor-pointer">
                                     <div class="group-hover:text-twitter-blue text-twitter-grey group-hover:bg-twitter-blue group-hover:bg-opacity-15 rounded-full p-2 transition duration-200 ease-in-out">
@@ -238,7 +237,6 @@
                                     </div>
                                 </div>
                                 <!-- share end -->
-                            
                             </div>
                             <!-- icons end -->
                             </div>
@@ -248,11 +246,9 @@
                 </div>
                 % end
                 <!-- tweet end -->
-
             </div>
             <!-- middle end -->
-            
-            
+        
             <!-- right start -->
             % include("profile_right")
             <!-- right end -->
@@ -262,17 +258,23 @@
             % end
         </div>
     </div>
-    
-    <section id="modal-update" class="hidden bg-black rounded-2xl p-2 mx-auto w-1/3 fixed inset-0 z-100 max-h-fit my-auto">
-        <button id="closeModal" class="text-white" onclick="closeUpdateModal()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18 18l-6-6m0 0L6 6m6 6l6-6m-6 6l-6 6"/></svg></button>
-            <div id="flex" class=" flex flex-col items-center">
-                <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="white" stroke="" stroke-linecap="round" stroke-linejoin="round" d="M 23.643 4.937 c -0.835 0.37 -1.732 0.62 -2.675 0.733 c 0.962 -0.576 1.7 -1.49 2.048 -2.578 c -0.9 0.534 -1.897 0.922 -2.958 1.13 c -0.85 -0.904 -2.06 -1.47 -3.4 -1.47 c -2.572 0 -4.658 2.086 -4.658 4.66 c 0 0.364 0.042 0.718 0.12 1.06 c -3.873 -0.195 -7.304 -2.05 -9.602 -4.868 c -0.4 0.69 -0.63 1.49 -0.63 2.342 c 0 1.616 0.823 3.043 2.072 3.878 c -0.764 -0.025 -1.482 -0.234 -2.11 -0.583 v 0.06 c 0 2.257 1.605 4.14 3.737 4.568 c -0.392 0.106 -0.803 0.162 -1.227 0.162 c -0.3 0 -0.593 -0.028 -0.877 -0.082 c 0.593 1.85 2.313 3.198 4.352 3.234 c -1.595 1.25 -3.604 1.995 -5.786 1.995 c -0.376 0 -0.747 -0.022 -1.112 -0.065 c 2.062 1.323 4.51 2.093 7.14 2.093 c 8.57 0 13.255 -7.098 13.255 -13.254 c 0 -0.2 -0.005 -0.402 -0.014 -0.602 c 0.91 -0.658 1.7 -1.477 2.323 -2.41 Z"/></svg></span>
+
+    <!-- update pop up start -->
+    <section id="modal-update" class="hidden bg-black rounded-2xl p-4 pb-10 mx-auto w-420 lg:w-600 fixed inset-0 z-100 max-h-fit my-auto">
+        <button id="closeModal" class="w-fit hover:bg-white text-twitter-grey hover:bg-opacity-10 rounded-full hover:cursor-pointer p-2 transition duration-200 ease-in-out" onclick="closeUpdateModal()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18 18l-6-6m0 0L6 6m6 6l6-6m-6 6l-6 6"/></svg>
+        </button>
+            <div class="flex flex-col items-center p-6">
                 <span class="text-white text-23 font-bold mt-4">Change username</span>
                 <input class="hidden" name="user_edit" value="{{user['user_name']}}"></input>
-                <input type="text" name="username_update" placeholder="Username" class="rounded-xl p-2 mt-4 w-80">
-                <button onclick="update()" class="bg-twitter-blue text-white rounded-3xl px-6 py-2 font-semibold w-80 mt-4 mb-8 hover:bg-opacity-90">Confirm</button>
+                <input type="text" name="username_update" placeholder="Username"  class="login-enter rounded-md bg-transparent invalid:border-[#F4212E] text-white text-17 placeholder-twitter-grey outline-none group border border-twitter-line focus:border-twitter-blue py-4 p-2 mt-4 w-80">
+
+                <button onclick="update()" class="bg-twitter-blue text-white rounded-full px-6 py-2 font-semibold w-80 mt-4 mb-8 hover:bg-opacity-90">
+                    Confirm
+                </button>
             </div>
     </section>
+    <!-- update pop up end -->
 
 <script>
     const modalUpdate = document.getElementById("modal-update")
@@ -301,7 +303,7 @@
         }
 
         const response = await fetch("/update", {
-            method: "PUT", 
+            method: "PUT",
             body: formData
         })
         const data = await response.json()
@@ -320,6 +322,6 @@
 <script src="/js/time.js"></script>
 <script src="/js/numbers.js"></script>
 <script src="/js/follow.js"></script>
-</body>
 
+</body>
 </html>
