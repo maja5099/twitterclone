@@ -7,9 +7,6 @@
     <title>Document</title>
 </head>
 
-
-
-
 <body>
 
     <section id="logout" class="hidden bg-black rounded-2xl p-8 mx-auto w-350 fixed inset-0 z-100 max-h-fit my-auto">
@@ -25,30 +22,23 @@
         </div>
     </section>
 
+    <script>
+            function closeLogout() {
+                const overlay = document.getElementById("overlay")
+                logout.classList.add("hidden")
+                overlay.classList.add("hidden")
+                document.body.style.overflow = "scroll";
+            }
 
+            function userLogout() {
+                fetch('/logout', {
+                method: 'POST',
+                })
 
-<script>
-    
-        function closeLogout() {
-            const overlay = document.getElementById("overlay")
-            logout.classList.add("hidden")
-            overlay.classList.add("hidden")
-            document.body.style.overflow = "scroll";
-            
-        }
+                window.location.href = '/'
 
-        function userLogout() {
-            fetch('/logout', {
-            method: 'POST',
-            })
-
-            window.location.href = '/'
-
-            closeLogout()
-            
-        }
-
-</script>
-
+                closeLogout()
+            }
+    </script>
 </body>
 </html>
